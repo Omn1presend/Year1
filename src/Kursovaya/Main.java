@@ -11,10 +11,6 @@ class Main {
     private final int Age;
     private final int Course;
     private final double AverageGrade;
-    private double averageGrade;
-    private double name;
-    private double age;
-    private double course;
 
     public Main(String name, int age, int course, double averageGrade) {
         this.Name = name;
@@ -26,36 +22,36 @@ class Main {
     // геттеры
     @Override
     public String toString() {
-        return "Имя: " + Name + ", Возраст: " + Age + ", Курс: " + Course + ", Средний балл: " + AverageGrade;
+        return Name + Age + Course + AverageGrade;
+    }
+
+    public String getName() {
+        return String.valueOf(Name);
+    }
+
+    public int getAge() {
+        return Age;
+    }
+
+    public int getCourse() {
+        return Course;
     }
 
     public double getAverageGrade() {
-        return averageGrade;
-    }
-
-    public double getName() {
-        return name;
-    }
-
-    public double getAge() {
-        return age;
-    }
-
-    public double getCourse() {
-        return course;
+        return AverageGrade;
     }
 
             public static void main(String[] args) {
                 HashMap<Integer, Main> students = new HashMap<>();
-                students.put(1, new Main("Иванов Иван", 19, 2, 4.5));
-                students.put(2, new Main("Петров Петр", 21, 3, 4.2));
-                students.put(3, new Main("Пупкин Василий", 22, 3, 3.1));
-                students.put(9, new Main("Карамышев Антон", 20, 2, 5.0));
-                students.put(8, new Main("Палкина Анна", 24, 5, 4.99));
-                students.put(7, new Main("Перов Семен", 22, 4, 2.1));
-                students.put(6, new Main("Пудов Аркадий", 19, 1, 3.5));
-                students.put(4, new Main("Колокольникова Мария", 21, 3, 3.7));
-                students.put(5, new Main("Петров Петр", 18, 1, 4.1));
+                students.put(3, new Main("Иванов Иван", 19, 2, 4.5));
+                students.put(5, new Main("Петров Петр", 21, 3, 4.2));
+                students.put(9, new Main("Пупкин Василий", 22, 3, 3.1));
+                students.put(2, new Main("Карамышев Антон", 20, 2, 5.0));
+                students.put(7, new Main("Палкина Анна", 24, 5, 4.99));
+                students.put(8, new Main("Перов Семен", 22, 4, 2.1));
+                students.put(1, new Main("Пудов Аркадий", 19, 1, 3.5));
+                students.put(6, new Main("Колокольникова Мария", 21, 3, 3.7));
+                students.put(4, new Main("Петров Петр", 18, 1, 4.1));
                 students.put(10, new Main("Петров Петр", 23, 5, 4.9));
 
 
